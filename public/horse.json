@@ -1,0 +1,35 @@
+  [
+    {
+         "_id":"_1",
+        "category" : "Animal Toy",
+        "sub-category" : "horse",
+        "name" : "horse",
+        "price" : "13",
+        "rating" : "2.5",
+        "img" : "https://i.ibb.co/xHPGnTB/pexels-kristina-paukshtite-712857.jpg ",
+        "details":"Horse toys gallop into imaginative play, inspiring young minds to embark on exciting equestrian adventures filled with bravery and exploration.With their majestic manes and strong, sturdy frames, horse toys offer a tactile experience that allows children to develop fine motor skills and engage in creative storytelling"
+    },
+    {
+         "_id":"2",
+        "category" : "Animal Toy",
+        "sub-category" : "horse",
+        "name" : "horse",
+        "price" : "20",
+        "rating" : "4.8",
+        "img" : "https://i.ibb.co/85n8KMz/pexels-natalia-goryaeva-9873789.jpg",
+        "details":"From miniature figurines to ride-on horses, these toys provide a captivating way for children to learn about different breeds, colors, and the beauty of the animal kingdom.Whether they're used for make-believe horse races or cherished as beloved companions, horse toys foster a deep connection with nature and ignite a lifelong love for these magnificent creatures"
+    },
+     {
+         "_id":"3",
+        "category" : "Animal Toy",
+        "sub-category" : "horse",
+        "name" : "horse",
+        "price" : "25",
+        "rating" : "4.8",
+        "img" : "https://i.ibb.co/kg70fHN/pexels-tamilles-esposito-15457336.jpg",
+        "details":"From miniature figurines to ride-on horses, these toys provide a captivating way for children to learn about different breeds, colors, and the beauty of the animal kingdom.Whether they're used for make-believe horse races or cherished as beloved companions, horse toys foster a deep connection with nature and ignite a lifelong love for these magnificent creatures"
+    }
+  ]
+  
+  
+  

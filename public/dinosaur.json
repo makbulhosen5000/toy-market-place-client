@@ -1,0 +1,43 @@
+[
+     {
+        "_id":"_1",
+        "category" : "Animal Toy",
+        "sub-category" : "Dinosaur",
+        "name" : "Dinosaur",
+        "price" : "20",
+        "rating" : "4.9",
+        "img" : "https://i.ibb.co/Pwgp88j/pexels-inga-seliverstova-3394221.jpg",
+        "details":"Dinosaur toys transport children back in time to the prehistoric era, sparking their curiosity and imagination as they explore a world ruled by these magnificent ancient creatures.With their intricate details and realistic features, dinosaur toys bring the thrill of discovery and adventure to playtime, allowing kids to recreate epic dinosaur battles or embark on daring archaeological expeditions."
+
+    },
+    {
+        "_id":"_2",
+        "category" : "Animal Toy",
+        "sub-category" : "Dinosaur",
+        "name" : "Dinosaur",
+        "price" : "18",
+        "rating" : "4.7",
+        "img" : "https://i.ibb.co/r7nhrYS/pexels-cottonbro-studio-3661265.jpg",
+        "details":"From the towering Tyrannosaurus rex to the gentle herbivores like the Triceratops, dinosaur toys offer an educational experience, helping children learn about different species, their characteristics, and their place in history.These timeless play companions not only entertain but also promote cognitive development and storytelling skills, as children delve into the mysteries and wonders of the fascinating dinosaur realm."
+
+    },
+    {
+        "_id":"_2",
+        "category" : "Animal Toy",
+        "sub-category" : "Dinosaur",
+        "name" : "Dinosaur",
+        "price" : "20",
+        "rating" : "3.7",
+        "img" : "https://i.ibb.co/PZksmLM/pexels-monstera-7139729.jpg",
+        "details":"From the towering Tyrannosaurus rex to the gentle herbivores like the Triceratops, dinosaur toys offer an educational experience, helping children learn about different species, their characteristics, and their place in history.These timeless play companions not only entertain but also promote cognitive development and storytelling skills, as children delve into the mysteries and wonders of the fascinating dinosaur realm."
+
+    }
+
+]
+
+
+
+
+
+
+

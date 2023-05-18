@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import Teddy from './Teddy';
+import React, { useContext, useEffect, useState } from 'react';
+import Teddy from './Toy';
+import AuthProvider from '../../Provider/AuthProvider';
 
 const ToyGallery = () => {
      
     const [teddies,setTeddies] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading,setLoading] = useState(true);
+  
+    console.log("teddies", teddies);
 
-    console.log(teddies);
+    // console.log(teddies);
     useEffect(()=>{
         setTimeout(()=>{
             fetch("teddy.json")
@@ -24,7 +27,7 @@ const ToyGallery = () => {
         </h1>
         {loading ? (
           <div className="flex justify-center items-center h-screen">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+            <div className="animate-spin rounded h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
           </div>
         ) : (
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">

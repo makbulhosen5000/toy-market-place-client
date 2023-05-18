@@ -1,0 +1,43 @@
+[
+    {
+        "id":"_1",
+        "category" : "Animal Toy",
+        "sub-category" : "teddy bear",
+        "name" : "teddy bear",
+        "price" : "10",
+        "rating" : "4.5",
+        "img" : "https://i.ibb.co/cXsz4pN/pexels-lisa-fotios-832999.jpg",
+        "details":"Teddy bears are synonymous with warmth and security, offering a comforting embrace that soothes both children and adults alike.These huggable companions often become treasured friends, listening to secrets and sharing in both tears and laughter throughout the years."
+    },
+
+    {
+        "id":"_2",
+        "category" : "Animal Toy",
+        "sub-category" : "teddy bear",
+        "name" : "teddy bear",
+        "price" : "12",
+        "rating" : "4.5",
+        "img" : "https://i.ibb.co/By59S4W/pexels-akshar-dave-870866.jpg",
+        "details":"With their button eyes and plush fur, teddy bears possess an undeniable charm that transcends generations, making them an enduring symbol of innocence and nostalgia.Whether gifted on special occasions or simply as a gesture of affection, a teddy bear has the magical ability to bring a smile and hold a special place in our hearts forever."
+
+    },
+     {
+        "id":"_3",
+        "category" : "Animal Toy",
+        "sub-category" : "teddy bear",
+        "name" : "teddy bear",
+        "price" : "15",
+        "rating" : "4.5",
+        "img" : "https://i.ibb.co/Zxmp8mP/pexels-hassan-ouajbir-1860160.jpg",
+        "details":"With their button eyes and plush fur, teddy bears possess an undeniable charm that transcends generations, making them an enduring symbol of innocence and nostalgia.Whether gifted on special occasions or simply as a gesture of affection, a teddy bear has the magical ability to bring a smile and hold a special place in our hearts forever."
+
+    }
+
+]
+
+
+
+
+
+
+

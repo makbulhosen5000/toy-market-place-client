@@ -21,7 +21,7 @@ const ToyGallery = () => {
     },[])
 
     return (
-      <div className="my-10 mx-10">
+      <div className="my-10">
         <h1 className="text-center font-bold text-2xl mb-10">
           <span className="text-red-600 ">Toy</span> Gallery
         </h1>

@@ -15,7 +15,27 @@ const Horses = ({ horse }) => {
         <h2 className="card-title">Price: ${horse?.price}</h2>
         <h2 className="card-title">Rating: {horse?.rating}</h2>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">View Details</button>
+          <div>
+            {/* The button to open modal */}
+            <label htmlFor="my-modal-3" className="btn btn-primary">
+              Details
+            </label>
+
+            {/* Put this part before </body> tag */}
+            <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+            <div className="modal">
+              <div className="modal-box relative">
+                <label
+                  htmlFor="my-modal-3"
+                  className="btn btn-success btn-circle absolute  right-2 top-4"
+                >
+                  ✕
+                </label>
+
+                <p className="py-4 text-black text-justify">{horse?.details}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -7,29 +7,29 @@
 
     {
         "_id" : 2,
-          "name" : "teddy cat",
-        "img" : "https://i.ibb.co/TgwCCBW/pexels-coppertist-wu-15515639.jpg"
+          "name" : "cat toy",
+        "img" : "https://i.ibb.co/9GgKFy0/pexels-miguel-padri-n-932263.jpg"
     },
       
     {
         "_id" : 3,
-        "name" : "teddy dinosaur",
+        "name" : "dinosaur toy",
         "img" : "https://i.ibb.co/X5PmLcr/pexels-cottonbro-studio-3661231.jpg"
     },
     
     {
         "_id" : 4,
-        "name" : "teddy bear",
-        "img" : "https://i.ibb.co/JFSXDbz/pexels-lisa-fotios-832999.jpg"
+        "name" : "unicorn toy",
+        "img" : "https://i.ibb.co/2j2kptV/pexels-white-water-5189972.jpg"
     },
     {
         "_id" : 5,
-        "name" : "teddy horse",
+        "name" : "horse toy",
         "img" : "https://i.ibb.co/CbFF15V/pexels-suki-lee-15343383.jpg"
     },
     {
          "_id" : 6,
-        "name" : "teddy dog",
+        "name" : "dog toy",
         "img" : "https://i.ibb.co/xgMFgth/pexels-yaroslav-shuraev-8499236.jpg"
     }
 ]

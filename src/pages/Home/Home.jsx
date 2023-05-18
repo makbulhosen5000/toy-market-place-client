@@ -7,7 +7,7 @@ import ReactTabs from './ReactTabs/teddyBears';
 const Home = () => {
     useTitle("Home")
     return (
-        <div>
+        <div className='mx-10'>
             <Banner/>
             <ToyGallery/>
             <ReactTabs/>

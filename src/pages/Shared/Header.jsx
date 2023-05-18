@@ -1,16 +1,22 @@
 import React from 'react';
 import logo from "../../assets/images/logo.png";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
       <div className="navbar bg-blue-600 text-white">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">Toy World</a>
+          <Link>
+            <img src={logo} alt="" style={{ width: "60px" }} />
+          </Link>
+          <a className="btn btn-ghost normal-case text-xl">
+            CodingDuck Toy World
+          </a>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
+              <Link>Home</Link>
             </li>
             <li tabIndex={0}>
               <a>
@@ -25,7 +31,7 @@ const Header = () => {
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
               </a>
-              <ul className="p-2 bg-base-100">
+              <ul className="p-2 bg-blue-600">
                 <li>
                   <a>Submenu 1</a>
                 </li>
@@ -35,7 +41,16 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link>Blog</Link>
+            </li>
+            <li>
+              <Link>All Toys</Link>
+            </li>
+            <li>
+              <Link>My Toys</Link>
+            </li>
+            <li>
+              <Link>Login</Link>
             </li>
           </ul>
         </div>

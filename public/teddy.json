@@ -1,0 +1,42 @@
+[
+    {
+        "_id" : 1,
+        "name" : "teddy bear",
+        "img" : "https://i.ibb.co/By59S4W/pexels-akshar-dave-870866.jpg"
+    },
+
+    {
+        "_id" : 2,
+          "name" : "teddy cat",
+        "img" : "https://i.ibb.co/TgwCCBW/pexels-coppertist-wu-15515639.jpg"
+    },
+      
+    {
+        "_id" : 3,
+        "name" : "teddy dinosaur",
+        "img" : "https://i.ibb.co/X5PmLcr/pexels-cottonbro-studio-3661231.jpg"
+    },
+    
+    {
+        "_id" : 4,
+        "name" : "teddy bear",
+        "img" : "https://i.ibb.co/JFSXDbz/pexels-lisa-fotios-832999.jpg"
+    },
+    {
+        "_id" : 5,
+        "name" : "teddy horse",
+        "img" : "https://i.ibb.co/CbFF15V/pexels-suki-lee-15343383.jpg"
+    },
+    {
+         "_id" : 6,
+        "name" : "teddy dog",
+        "img" : "https://i.ibb.co/xgMFgth/pexels-yaroslav-shuraev-8499236.jpg"
+    }
+]
+
+
+
+
+
+
+

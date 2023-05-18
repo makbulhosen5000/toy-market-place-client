@@ -77,7 +77,7 @@ const NavLinks = ({ toggleMenu }) => {
           } flex items-center group`}
           onClick={toggleDropdown}
         >
-          <span className="mr-1">About</span>
+          <span className="mr-1">Categories</span>
           <svg
             className={`${
               isDropdownOpen ? "text-white" : "text-gray-400"
@@ -115,14 +115,14 @@ const NavLinks = ({ toggleMenu }) => {
           </div>
         )}
       </div>
-      <NavLink
-        to="/contact"
+      <Link
+        to="/login"
         activeClassName="text-white"
         className="text-gray-300 hover:text-white"
         onClick={toggleMenu}
       >
-        Contact
-      </NavLink>
+        Login
+      </Link>
     </div>
   );
 };

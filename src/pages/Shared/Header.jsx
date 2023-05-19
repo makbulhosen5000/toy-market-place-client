@@ -4,24 +4,34 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Header = () => {
-  const {user} = useContext(AuthContext);
-    return (
-      <div className="lg:mx-10">
-        <div className="navbar bg-blue-600 text-white ">
-          <div className="flex-1">
-            <Link>
-              <img src={logo} alt="" style={{ width: "60px" }} />
-            </Link>
-            <a className="btn btn-ghost normal-case text-xl">
-              CodingDuck Toy World
-            </a>
-          </div>
-          <div className="flex-none">
-            <ul className="menu menu-horizontal px-1">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              {/* <li tabIndex={0}>
+  const { user,logOut } = useContext(AuthContext);
+
+  // user logout 
+  const handleSignOut = () => {
+    logOut()
+      .then((result) => {})
+      .catch((error) => {
+        console.log(error);
+      });
+    toast("Logout Successfully");
+  };
+  return (
+    <div className="lg:mx-10">
+      <div className="navbar bg-blue-600 text-white ">
+        <div className="flex-1">
+          <Link>
+            <img src={logo} alt="" style={{ width: "60px" }} />
+          </Link>
+          <a className="btn btn-ghost normal-case text-xl">
+            CodingDuck Toy World
+          </a>
+        </div>
+        <div className="flex-none">
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            {/* <li tabIndex={0}>
                 <a>
                   Category
                   <svg
@@ -43,27 +53,29 @@ const Header = () => {
                   </li>
                 </ul>
               </li> */}
-              <li>
-                <Link to="/blog">Blog</Link>
-              </li>
-              <li>
-                <Link>All Toys</Link>
-              </li>
-              <li>
-                <Link>My Toys</Link>
-              </li>
-              <li>
-                {user ? (
-                  <Link onClick={handleLogout} to="">Logout</Link>
-                ) : (
-                  <Link to="/login">Login</Link>
-                )}
-              </li>
-            </ul>
-          </div>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link>All Toys</Link>
+            </li>
+            <li>
+              <Link>My Toys</Link>
+            </li>
+            <li>
+              {user ? (
+                <Link onClick={handleSignOut} to="">
+                  Logout
+                </Link>
+              ) : (
+                <Link to="/login">Login</Link>
+              )}
+            </li>
+          </ul>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Header;

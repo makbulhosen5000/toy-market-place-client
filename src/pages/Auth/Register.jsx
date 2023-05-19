@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useTitle from "../Title/UseTitle";
 import { toast } from "react-hot-toast";
-import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
@@ -21,14 +20,14 @@ const Register = () => {
    const email = form.email.value;
    const password = form.password.value;
 
-   navigate("/");
    setError("Something Wrong");
-   toast("Register Successfully");
    createUser(email, password)
      .then((result) => {
        const loggedUser = result.user;
        console.log(loggedUser);
        form.reset();
+       navigate("/");
+       toast("Register Successfully");
      })
      .catch((error) => {
        console.log(error);
@@ -115,6 +114,9 @@ const Register = () => {
               placeholder="Enter your password"
             />
           </div>
+          <div>
+            <p className="text-red-600 font-bold mb-2">{error}</p>
+          </div>
           <div className="flex items-center justify-between">
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -129,10 +131,6 @@ const Register = () => {
             >
               Login Here
             </Link>
-          </div>
-          <div className="divider">OR</div>
-          <div className="text-center">
-            <p className="text-red-600 font-bold">{error}</p>
           </div>
         </form>
       </div>

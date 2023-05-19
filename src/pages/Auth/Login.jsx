@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useTitle from "../Title/UseTitle";
-import { toast } from "react-hot-toast";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
   useTitle("Login");
@@ -29,16 +29,17 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-
-    navigate("/");
-    setError("");
-    toast("Login Successfully");
+   
+    setError("Wrong Email And Password");
+    
+  
     signIn(email, password)
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
         form.reset();
         navigate("/");
+        toast("Login Successfully");
       })
       .then((error) => {
         console.log(error);
@@ -88,6 +89,9 @@ const Login = () => {
               type="password"
               placeholder="Enter your password"
             />
+          </div>
+          <div>
+            <p className="text-red-600 font-bold mb-2">{error}</p>
           </div>
           <div className="flex items-center justify-between">
             <button

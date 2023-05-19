@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import logo from "../../assets/images/logo.png";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const Header = () => {
   const { user,logOut } = useContext(AuthContext);

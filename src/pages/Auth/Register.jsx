@@ -20,11 +20,9 @@ const Register = () => {
    const photo = form.photo.value;
    const email = form.email.value;
    const password = form.password.value;
-  // const confirm = form.confirm.value;
-   console.log(name, photo, email, password, confirm);
 
    navigate("/");
-   setError("");
+   setError("Something Wrong");
    toast("Register Successfully");
    createUser(email, password)
      .then((result) => {
@@ -134,11 +132,7 @@ const Register = () => {
           </div>
           <div className="divider">OR</div>
           <div className="text-center">
-            <Link className="grid place-items-center">
-              <span className="bg-yellow-600 p-3 rounded-lg text-white">
-                <FaGoogle />
-              </span>
-            </Link>
+            <p className="text-red-600 font-bold">{error}</p>
           </div>
         </form>
       </div>

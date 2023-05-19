@@ -14,6 +14,7 @@ const Horses = ({ horse }) => {
         <h2 className="card-title">Name: {horse?.name}</h2>
         <h2 className="card-title">Price: ${horse?.price}</h2>
         <h2 className="card-title">Rating: {horse?.rating}</h2>
+
         <div className="card-actions justify-end">
           <div>
             {/* The button to open modal */}
@@ -32,7 +33,10 @@ const Horses = ({ horse }) => {
                   ✕
                 </label>
 
-                <p className="py-4 text-black text-justify">{horse?.details}</p>
+                <p className="py-4 text-black text-justify">
+                  {" "}
+                  {horse?.details}
+                </p>
               </div>
             </div>
           </div>

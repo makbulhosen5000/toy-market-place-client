@@ -2,15 +2,18 @@ import React from 'react';
 import useTitle from '../Title/UseTitle';
 import Banner from '../Slider/Banner';
 import ToyGallery from '../Toy/ToyGallery';
-import ReactTabs from './ReactTabs/teddyBears';
+
+import OldCollection from './ToyOldCollection/OldCollection';
+import TeddyBears from './ReactTabs/TeddyBears';
 
 const Home = () => {
     useTitle("Home")
     return (
-        <div className='mx-10'>
+        <div className=''>
             <Banner/>
             <ToyGallery/>
-            <ReactTabs/>
+            <TeddyBears/>
+            <OldCollection/>
         </div>
     );
 };

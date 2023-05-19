@@ -19,7 +19,7 @@ const teddyBears = () => {
             <div className="animate-spin rounded h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
           </div>
         ) : (
-          <Tabs className="text-center mb-8">
+          <Tabs className="text-center">
             <TabList className="flex justify-center items-center gap-6 ">
               {/* dinosaur */}
               <Tab className=" bg-blue-600 p-2 text-white rounded-md">

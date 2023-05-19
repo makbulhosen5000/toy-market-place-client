@@ -5,8 +5,8 @@ import logo from '../../assets/images/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white mx-10">
-      <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-blue-600 text-white">
+      <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-10">
         <div className="flex flex-wrap justify-between">
           <div className="w-full sm:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
             <Link to="/" className="text-white font-bold text-xl">

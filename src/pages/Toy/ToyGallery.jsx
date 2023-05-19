@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Teddy from './Toy';
 import AuthProvider from '../../Provider/AuthProvider';
 

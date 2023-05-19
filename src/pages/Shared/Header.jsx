@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-      <div className="px-10">
+      <div className="">
         <div className="navbar bg-blue-600 text-white ">
           <div className="flex-1">
             <Link>

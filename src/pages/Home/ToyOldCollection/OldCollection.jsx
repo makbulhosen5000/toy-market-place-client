@@ -64,7 +64,12 @@ const OldCollection = () => {
           </figure>
 
           <div className="card-body">
-            <h2 className="card-title">New Offer!</h2>
+            <Marquee>
+              <h2 className="card-title">
+                New Offer! Don't miss out on this amazing opportunity
+              </h2>
+            </Marquee>
+
             <p className="text-gray-700 mb-4">
               Don't miss out on this amazing opportunity to grab your favorite
               toys at jaw-dropping prices. The sale starts on [5-25-2023] and

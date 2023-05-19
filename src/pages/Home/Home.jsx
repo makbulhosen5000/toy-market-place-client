@@ -9,7 +9,7 @@ import TeddyBears from './ReactTabs/TeddyBears';
 const Home = () => {
     useTitle("Home")
     return (
-        <div className=''>
+        <div className='lg:mx-10'>
             <Banner/>
             <ToyGallery/>
             <TeddyBears/>

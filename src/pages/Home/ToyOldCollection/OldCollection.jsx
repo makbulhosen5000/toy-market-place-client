@@ -44,7 +44,7 @@ const OldCollection = () => {
           <figure>
             <img
               className="rounded-full"
-              src="https://i.ibb.co/X5PmLcr/pexels-cottonbro-studio-3661231.jpg"
+              src="https://i.ibb.co/CbFF15V/pexels-suki-lee-15343383.jpg"
               alt="Teddy"
               style={{ width: "300px", height: "300px" }}
             />
@@ -65,7 +65,7 @@ const OldCollection = () => {
 
           <div className="card-body">
             <Marquee>
-              <h2 className="card-title">
+              <h2 className="card-title text-red-600">
                 New Offer! Don't miss out on this amazing opportunity
               </h2>
             </Marquee>

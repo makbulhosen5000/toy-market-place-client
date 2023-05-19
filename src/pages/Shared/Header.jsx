@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from "../../assets/images/logo.png";
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Header = () => {
+  const {user} = useContext(AuthContext);
     return (
-      <div className="">
+      <div className="lg:mx-10">
         <div className="navbar bg-blue-600 text-white ">
           <div className="flex-1">
             <Link>
@@ -19,7 +21,7 @@ const Header = () => {
               <li>
                 <Link to="/">Home</Link>
               </li>
-              <li tabIndex={0}>
+              {/* <li tabIndex={0}>
                 <a>
                   Category
                   <svg
@@ -40,7 +42,7 @@ const Header = () => {
                     <a>Submenu 2</a>
                   </li>
                 </ul>
-              </li>
+              </li> */}
               <li>
                 <Link to="/blog">Blog</Link>
               </li>
@@ -51,7 +53,11 @@ const Header = () => {
                 <Link>My Toys</Link>
               </li>
               <li>
-                <Link>Login</Link>
+                {user ? (
+                  <Link onClick={handleLogout} to="">Logout</Link>
+                ) : (
+                  <Link to="/login">Login</Link>
+                )}
               </li>
             </ul>
           </div>

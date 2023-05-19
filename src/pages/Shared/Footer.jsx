@@ -28,35 +28,17 @@ const Footer = () => {
                 to="https://www.google.com/"
                 className="text-white hover:text-black mr-4"
               >
-                <svg
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
                   <FaGoogle />
-                </svg>
               </Link>
               <Link
                 to="https://www.youtube.com/"
                 className="text-white hover:text-black mr-4"
               >
-                <svg
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <FaYoutube />
-                </svg>
+                <FaYoutube />
               </Link>
               <Link to="https://www.facebook.com/" className="hover:text-black">
-                <svg
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
                   {/* Social media icon */}
                   <FaFacebook />
-                </svg>
               </Link>
             </div>
           </div>

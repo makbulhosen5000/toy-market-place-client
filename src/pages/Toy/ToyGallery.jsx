@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Teddy from './Toy';
-import AuthProvider from '../../Provider/AuthProvider';
+
 
 const ToyGallery = () => {
      
     const [teddies,setTeddies] = useState([]);
     const [loading,setLoading] = useState(true);
-  
-    console.log("teddies", teddies);
 
-    // console.log(teddies);
     useEffect(()=>{
         setTimeout(()=>{
             fetch("teddy.json")

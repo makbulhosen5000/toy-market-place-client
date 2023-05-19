@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Toy = ({ teddy }) => {
-    console.log(teddy.name);
   return (
     <div className=" w-100 bg-base-100 shadow-xl my-5">
       <figure>

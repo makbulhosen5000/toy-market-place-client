@@ -36,14 +36,14 @@ const teddyBears = () => {
             <TabPanel>
               <div className="flex lg:justify-center items-center h-screen gap-4 ">
                 {teddyBears.map((teddyBear) => (
-                  <TeddyBear key={teddyBear?._id} teddyBear={teddyBear} />
+                  <TeddyBear key={teddyBear._id} teddyBear={teddyBear} />
                 ))}
               </div>
             </TabPanel>
             <TabPanel>
               <div className="flex lg:justify-center items-center h-screen gap-4 ">
                 {horses.map((horse) => (
-                  <Horses key={horse._id} horse={horse} />
+                  <Horses key={horse._id}  horse={horse} />
                 ))}
               </div>
             </TabPanel>

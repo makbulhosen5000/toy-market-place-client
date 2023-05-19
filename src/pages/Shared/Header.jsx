@@ -58,10 +58,10 @@ const Header = () => {
               <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <Link>All Toys</Link>
+              <Link to='/all-toys'>All Toys</Link>
             </li>
             <li>
-              <Link>My Toys</Link>
+              <Link to="/my-toys">My Toys</Link>
             </li>
             <li>
               {user ? (

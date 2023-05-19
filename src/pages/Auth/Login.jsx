@@ -1,15 +1,20 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useTitle from "../Title/UseTitle";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-hot-toast";
 
+
+
 const Login = () => {
   useTitle("Login");
   const [error, setError] = useState("");
+
   const { signIn, signInWithGoogle } = useContext(AuthContext);
+  const location = useLocation();
   const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
 
   //login with google
   const loginWithGoogle = () => {
@@ -17,22 +22,25 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
+        navigate("/");
+        toast("Login Successfully");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);
       });
     navigate("/");
   };
-
+  
+ 
   const loginFormHandler = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-   
-    setError("Wrong Email And Password");
-    
   
+    setError("Wrong Email And Password");
+
     signIn(email, password)
       .then((result) => {
         const loggedUser = result.user;
@@ -40,6 +48,7 @@ const Login = () => {
         form.reset();
         navigate("/");
         toast("Login Successfully");
+        navigate(from, { replace: true });
       })
       .then((error) => {
         console.log(error);

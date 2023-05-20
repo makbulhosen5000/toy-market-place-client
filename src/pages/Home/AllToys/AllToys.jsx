@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import AllToy from './AllToy';
 
 const AllToys = () => {
+
+    const allToys = useLoaderData();
+
     return (
-        <div className='mx-10'>
-            all toys
+        <div>
+            {allToys.map(toy=><AllToy key={toy._id} toy={toy} />)}
         </div>
     );
 };

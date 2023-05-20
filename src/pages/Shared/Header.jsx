@@ -57,21 +57,25 @@ const Header = () => {
             <li>
               <Link to="/blog">Blog</Link>
             </li>
-            <li>
-              <Link to='/all-toys'>All Toys</Link>
-            </li>
-            <li>
-              <Link to="/my-toys">My Toys</Link>
-            </li>
-            <li>
-              {user ? (
-                <Link onClick={handleSignOut} to="">
-                  Logout
-                </Link>
-              ) : (
+            {user ? (
+              <>
+                <li>
+                  <Link to="/all-toys">All Toys</Link>
+                </li>
+                <li>
+                  <Link to="/my-toys">My Toys</Link>
+                </li>
+                <li>
+                  <Link onClick={handleSignOut} to="">
+                    Logout
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <li>
                 <Link to="/login">Login</Link>
-              )}
-            </li>
+              </li>
+            )}
           </ul>
         </div>
       </div>

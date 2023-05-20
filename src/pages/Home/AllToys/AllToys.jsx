@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import AllToy from './AllToy';
 
 const AllToys = () => {
 
     const allToys = useLoaderData();
-
+    
     return (
       <div className="my-10 mx-10">
         <div>

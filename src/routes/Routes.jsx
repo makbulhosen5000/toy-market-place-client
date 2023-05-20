@@ -63,7 +63,9 @@ const router = createBrowserRouter([
       {
         path:'create-my-toy',
         element:<CreateMyToy/>
-      }
+        
+      },
+ 
     ],
   },
 ]);

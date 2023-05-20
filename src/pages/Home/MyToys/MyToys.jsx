@@ -1,11 +1,24 @@
-import React from 'react';
-import { FaDiagnoses, FaEdit, FaPlus, FaTrash } from 'react-icons/fa';
+import React, { useContext, useEffect, useState } from 'react';
+import {  FaPlus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import MyToy from './MyToy';
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const MyToys = () => {
+    const {loading} = useContext(AuthContext);
+    const [myToys,setMyToys] = useState([]);
+ 
+     useEffect(()=>{
+        fetch("http://localhost:5000/toys")
+        .then(res=> res.json())
+        .then(data => setMyToys(data))
+        .catch(error => console.log(error))
+     })
     return (
       <>
+   
         <div className="overflow-x-auto my-10 mx-10">
+   
           <div className="flex justify-between">
             <div>
               <h1 className="text-center mb-10 text-2xl font bold">
@@ -28,28 +41,20 @@ const MyToys = () => {
                 <th>Toy Name</th>
                 <th>Sub-Category</th>
                 <th>Price</th>
+                <th>Quantity</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              {/* row 1 */}
-              <tr>
-                <th>1</th>
-                <td>Cy Ganderton</td>
-                <td>Cy Ganderton</td>
-                <td>Cy Ganderton</td>
-                <td>
-                  <button className="btn btn-primary">
-                    <FaEdit />
-                  </button>
-                  <button className="btn btn-danger ml-2">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
+              
+              {
+              myToys.map(myToy=><MyToy key={myToy._id} myToy={myToy} />)
+              }
+              
             </tbody>
           </table>
         </div>
+
       </>
     );
 };

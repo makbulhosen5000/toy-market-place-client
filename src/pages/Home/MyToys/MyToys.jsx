@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {  FaPlus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import MyToy from './MyToy';
@@ -8,6 +8,7 @@ import useTitle from '../../Title/UseTitle';
 const MyToys = () => {
     useTitle("My Toys")
     const [myToys,setMyToys] = useState([]);
+    //filterToys uses for searching and store myToys value 
     const [filterToys,setFilterToys] = useState(myToys);
  
      useEffect(()=>{
@@ -64,7 +65,6 @@ const MyToys = () => {
           </table>
         </div>
       </>
-    );
-};
+  )};
 
 export default MyToys;

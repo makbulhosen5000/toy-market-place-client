@@ -8,6 +8,8 @@ const Toy = ({ teddy }) => {
           src={teddy?.img}
           alt="Teddy"
           style={{ width: "400px", height: "300px" }}
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
         />
       </figure>
       <div className="card-body">

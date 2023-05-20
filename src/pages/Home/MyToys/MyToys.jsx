@@ -2,10 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import {  FaPlus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import MyToy from './MyToy';
+import Search from './Search';
+import useTitle from '../../Title/UseTitle';
 
 const MyToys = () => {
-
+    useTitle("My Toys")
     const [myToys,setMyToys] = useState([]);
+    const [filterToys,setFilterToys] = useState(myToys);
  
      useEffect(()=>{
         fetch("http://localhost:5000/toys")
@@ -13,11 +16,20 @@ const MyToys = () => {
         .then(data => setMyToys(data))
         .catch(error => console.log(error))
      })
+
+     const handleSearch = (searchValue) =>{
+        let value = searchValue.toLowerCase();
+        const newToys = myToys.filter((myTy)=>{
+          const toyName = myTy.name.toLowerCase();
+          return toyName.startsWith(value);
+        });
+        setFilterToys(newToys);
+     }
     return (
       <>
-   
         <div className="overflow-x-auto my-10 mx-10 text-center">
-   
+          <Search onSearch={handleSearch} />
+
           <div className="flex justify-between">
             <div>
               <h1 className=" mb-10 text-2xl font bold">
@@ -45,15 +57,12 @@ const MyToys = () => {
               </tr>
             </thead>
             <tbody>
-              
-              {
-              myToys.map(myToy=><MyToy key={myToy._id} myToy={myToy} />)
-              }
-              
+              {filterToys.map((myToy) => (
+                <MyToy key={myToy._id} myToy={myToy} />
+              ))}
             </tbody>
           </table>
         </div>
-
       </>
     );
 };

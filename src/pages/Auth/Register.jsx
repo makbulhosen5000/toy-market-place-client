@@ -11,7 +11,6 @@ const Register = () => {
     const navigate = useNavigate();
 
 
-
  const registerFormHandler = (e) => {
    e.preventDefault();
    const form = e.target;
@@ -19,7 +18,7 @@ const Register = () => {
    const photo = form.photo.value;
    const email = form.email.value;
    const password = form.password.value;
-   console.log(name,photo);
+  
    setError("Something Wrong");
    createUser(email, password)
      .then((result) => {
@@ -65,6 +64,7 @@ const Register = () => {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               name="photo"
               id="photo"
+              
               type="text"
               placeholder="Enter your photo url"
               required

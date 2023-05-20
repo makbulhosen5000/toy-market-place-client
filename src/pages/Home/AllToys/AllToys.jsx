@@ -2,8 +2,8 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import AllToy from './AllToy';
 
-const AllToys = () => {
 
+const AllToys = () => {
     const allToys = useLoaderData();
     
     return (
@@ -17,7 +17,7 @@ const AllToys = () => {
           />
           {/* Other JSX */}
         </div>
-        <table className="table w-full">
+        <table className="table w-full text-center">
           <thead>
             <tr>
               <th>Seller</th>

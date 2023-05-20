@@ -11,7 +11,7 @@ const AllToyDetails = () => {
     return (
       <div className="mx-10 my-10">
         <h1 className="text-center text-2xl font-bold mb-10">
-          <span className='text-red-600'>Details of</span> {details.name}
+          <span className='text-red-600'>Details of</span> {details.subcategory}
         </h1>
         <p className=" border-blue-200 border p-10">{details.details}</p>
       </div>

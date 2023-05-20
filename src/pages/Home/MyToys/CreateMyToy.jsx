@@ -107,7 +107,7 @@ const CreateMyToy = () => {
                   htmlFor="subcategory"
                   className="block text-gray-700 font-bold mb-2"
                 >
-                  Subcategory
+                  Sub-Category
                 </label>
                 <input
                   type="text"

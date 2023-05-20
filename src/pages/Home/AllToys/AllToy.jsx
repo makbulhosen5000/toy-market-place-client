@@ -7,8 +7,8 @@ const AllToy = ({ toy }) => {
 
   return (
         <tr>
-          <td>{toy?.user}</td>
           <td>{toy?.name}</td>
+          <td>{toy?.subcategory}</td>
           <td>${toy?.price}</td>
           <td>{toy?.quantity}</td>
           <Link to={`/allToyDetails/${toy._id}`}>

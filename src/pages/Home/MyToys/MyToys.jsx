@@ -2,10 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import {  FaPlus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import MyToy from './MyToy';
-import { AuthContext } from '../../../Provider/AuthProvider';
 
 const MyToys = () => {
-    const {loading} = useContext(AuthContext);
+
     const [myToys,setMyToys] = useState([]);
  
      useEffect(()=>{
@@ -17,11 +16,11 @@ const MyToys = () => {
     return (
       <>
    
-        <div className="overflow-x-auto my-10 mx-10">
+        <div className="overflow-x-auto my-10 mx-10 text-center">
    
           <div className="flex justify-between">
             <div>
-              <h1 className="text-center mb-10 text-2xl font bold">
+              <h1 className=" mb-10 text-2xl font bold">
                 <span className="text-red-600">User</span> Information
               </h1>
             </div>
@@ -33,12 +32,12 @@ const MyToys = () => {
               </Link>
             </div>
           </div>
-          <table className="table table-zebra w-full text-center">
+          <table className="text-center table table-zebra w-full">
             {/* head */}
             <thead>
               <tr>
-                <th>User</th>
-                <th>Toy Name</th>
+                <th width="20%">Photo</th>
+                <th>Name</th>
                 <th>Sub-Category</th>
                 <th>Price</th>
                 <th>Quantity</th>

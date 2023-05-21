@@ -8,36 +8,35 @@ const MyToy = ({ myToy }) => {
     const [toys,setToys] = useState([])
 
     // delete myToys
-    const deleteMyToyHandler = (_id) =>{
-        Swal.fire({
-          title: "Are you sure?",
-          text: "You won't be able to revert this!",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Yes, delete it!",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            console.log("delete");
-            fetch(`http://localhost:5000/toys/${_id}`, {
+    const deleteMyToyHandler = (_id) => {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          console.log("delete");
+          fetch(
+            `https://toy-market-place-server-jet.vercel.app/toys/${myToy._id}`,
+            {
               method: "DELETE",
-            })
-              .then((res) => res.json())
-              .then((data) => {
-                if (data.deletedCount > 0) {
-                  Swal.fire(
-                    "Deleted!",
-                    "Data deleted Successfully.",
-                    "success"
-                  );
-                }
-                const remaining = toys.filter((toy) => toy._id !== _id);
-                setToys(remaining);
-              });
-          }
-        });
-    }
+            }
+          )
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.deletedCount > 0) {
+                Swal.fire("Deleted!", "Data has been deleted.", "success");
+              }
+              const remaining = toys.filter((toy) => toy._id !== _id);
+              setToys(remaining);
+            });
+        }
+      });
+    };
   return (
     <tr>
       <td>

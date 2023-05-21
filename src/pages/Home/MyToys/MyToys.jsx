@@ -12,17 +12,16 @@ const MyToys = () => {
   //filterToys uses for searching and store myToys value
   const [filterToys, setFilterToys] = useState(myToys);
 
-  useEffect(() => {
 
-    fetch("http://localhost:5000/toys")
-      .then((res) => res.json())
-      .then(data => {
-        const result = data.sort((a, b) => a.price - b.price);
-        setMyToys(result)
-      })
-      .catch((error) => console.log(error));
-    });
-  // const result = data.sort((a, b) => a.price - b.price);
+     useEffect(() => {
+       fetch("https://toy-market-place-server-jet.vercel.app/toys")
+         .then((res) => res.json())
+         .then((data) => {
+           const result = data.sort((a, b) => a.price - b.price);
+           setMyToys(result);
+         })
+         .catch((error) => console.log(error));
+     });
 
   // for handle search function
   const handleSearch = (searchValue) => {
@@ -34,14 +33,14 @@ const MyToys = () => {
     setFilterToys(newToys);
   };
 
- 
-
+ // sort by price
 
 
   return (
     <>
       <div className="overflow-x-auto my-10 mx-10 text-center">
         <Search onSearch={handleSearch} />
+      
         <div className="flex justify-between">
           <div>
             <h1 className=" mb-10 text-2xl font bold">

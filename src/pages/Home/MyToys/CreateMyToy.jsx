@@ -20,7 +20,7 @@ const CreateMyToy = () => {
          const quantity = form.quantity.value;
          const details = form.details.value;
          const userInfo ={photo, name,email,subcategory,price,quantity,details}
-          fetch("http://localhost:5000/toys", {
+          fetch("https://toy-market-place-server-jet.vercel.app/toys", {
             method: "POST",
             headers: {
               "content-type": "application/json",

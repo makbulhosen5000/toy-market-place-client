@@ -20,9 +20,11 @@ const Dinosaurs = ({ dinosaur }) => {
         <h2 className="card-title">Name: {dinosaur?.name}</h2>
         <h2 className="card-title">Price: ${dinosaur?.price}</h2>
         <h2 className="card-title">Rating: {dinosaur?.rating}</h2>
-        <Link to='/login'>
+        <Link to="/login">
           <div className="card-actions justify-end">
-            <button onClick={ViewDetails} className="btn btn-primary">View Details</button>
+            <button onClick={dinosaurViewDetails} className="btn btn-primary">
+              View Details
+            </button>
           </div>
         </Link>
       </div>

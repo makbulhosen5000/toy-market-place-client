@@ -23,14 +23,12 @@ const Header = () => {
           <Link>
             <img src={logo} alt="" style={{ width: "60px" }} />
           </Link>
-          <a className="btn btn-ghost normal-case text-xl">
-            CodingDuck Toy World
-          </a>
+          <a className=" btn btn-ghost normal-case text-xl">Toy World</a>
         </div>
-        <div className="flex-none">
+        <div className=" flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to="/">Home</Link>
+              <Link className="ml-6" to="/">Home</Link>
             </li>
             <li>
               <Link to="/blog">Blog</Link>

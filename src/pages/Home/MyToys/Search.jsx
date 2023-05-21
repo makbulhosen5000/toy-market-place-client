@@ -4,7 +4,9 @@ const Search = (props) => {
     const [searchText, setSearchText] = useState('');
 
     const handleChange = (e) =>{
+      e.preventDefault();
       setSearchText(e.target.value);
+
     }
     useEffect(() => {
       props.onSearch(searchText);

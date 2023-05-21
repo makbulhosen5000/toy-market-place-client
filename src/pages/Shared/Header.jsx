@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import logo from "../../assets/images/logo.png";
-import { Link } from 'react-router-dom';
-import { AuthContext } from '../../Provider/AuthProvider';
-import { toast } from 'react-hot-toast';
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const Header = () => {
-  const { user,logOut } = useContext(AuthContext);
-  
-  // user logout 
+  const { user, logOut } = useContext(AuthContext);
+
+  // user logout
   const handleSignOut = () => {
     logOut()
       .then((result) => {})
@@ -38,9 +38,10 @@ const Header = () => {
             <li>
               <Link to="/all-toys">All Toys</Link>
             </li>
-            <li className='mr-2'>
+            <li className="">
               <Link to="/my-toys">My Toys</Link>
             </li>
+            <li></li>
 
             {user ? (
               <>
@@ -49,8 +50,16 @@ const Header = () => {
                     Logout
                   </Link>
                 </li>
+
                 <li>
-                  <Link>{user?.email}</Link>
+                  <Link>
+                    <img
+                      src={user?.photoURL}
+                      alt=""
+                      title={user?.displayName}
+                      className="items-center w-[25%] h-[1=25%] rounded-full"
+                    />
+                  </Link>
                 </li>
               </>
             ) : (

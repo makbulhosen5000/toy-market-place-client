@@ -3,40 +3,37 @@ import { Link, useNavigate } from "react-router-dom";
 import useTitle from "../Title/UseTitle";
 import { toast } from "react-hot-toast";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-    useTitle("Register");
-    const [error,setError] = useState("");
-    const { createUser } = useContext(AuthContext);
-    const navigate = useNavigate();
+  useTitle("Register");
+  const [error, setError] = useState("");
+  const { createUser, updateUserData } = useContext(AuthContext);
+  const navigate = useNavigate();
 
+  const registerFormHandler = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
 
- const registerFormHandler = (e) => {
-   e.preventDefault();
-   const form = e.target;
-   const name = form.name.value;
-   const photo = form.photo.value;
-   const email = form.email.value;
-   const password = form.password.value;
-  
-   setError("Something Wrong");
-   createUser(email, password)
-     .then((result) => {
-       const loggedUser = result.user;
-       console.log(loggedUser);
-       form.reset();
-       navigate("/");
-       toast("Register Successfully");
-     })
-     .catch((error) => {
-       console.log(error);
-       setError(error.message);
-     });
- };
-
-
-
-
+    setError("Something Wrong");
+    createUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        updateUserData(result.user, name, photo);
+        console.log(loggedUser);
+        form.reset();
+        navigate("/");
+        toast("Register Successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+        setError(error.message);
+      });
+  };
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-center lg:mx-10 my-20">
@@ -64,7 +61,6 @@ const Register = () => {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               name="photo"
               id="photo"
-              
               type="text"
               placeholder="Enter your photo url"
               required
